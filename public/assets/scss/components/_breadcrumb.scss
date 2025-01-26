@@ -1,0 +1,80 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 Breadcrumb
+/*----------------------------------------*/
+.breadcrumb-bg {
+	background-image: url("../imgs/bg/breadcrumb_bg.jpg");
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	padding: 148px 0;
+	z-index: 1;
+	@media #{$md,$lg,$xl} {
+		padding: 110px 0px;
+	}
+	@media #{$max-sm} {
+		padding: 90px 0px;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 30%, rgba(0,212,255,0) 100%);
+		background: -webkit-linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 30%, rgba(0,212,255,0) 100%);
+		background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 30%, rgba(0,212,255,0) 100%);
+		z-index: -1;
+	}
+}
+.breadcrumb-content {
+	.title {
+		font-size: 60px;
+		margin-bottom: 17px;
+		line-height: 1.1;
+		@media #{$md} {
+			font-size: 54px;
+		}
+		@media #{$sm} {
+			font-size: 46px;
+		}
+		@media #{$xs} {
+			font-size: 42px;
+		}
+		@media #{$xxs} {
+			font-size: 38px;
+		}
+	}
+	.breadcrumb {
+		margin-bottom: 0;
+		.breadcrumb-item {
+			font-size: 15px;
+			color: var(--bd-heading-primary);
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+	.breadcrumb-item {
+		& + .breadcrumb-item {
+			display: flex;
+			align-items: center;
+			padding-left: 15px;
+			&::before {
+				content: "";
+				display: block;
+				width: 2px;
+				height: 11px;
+				background: var(--bd-heading-primary);
+				padding-right: 0;
+				margin: 0 15px 0 0;
+			}
+		}
+	}
+}
+.breadcrumb {
+	& > .active {
+		color: var(--bd-theme-primary);
+	}
+}

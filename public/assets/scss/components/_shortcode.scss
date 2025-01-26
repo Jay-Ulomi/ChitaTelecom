@@ -1,0 +1,42 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.9 shortcode
+/*----------------------------------------*/
+
+// shortcode css for responsive
+@media #{max-lg} {
+	.fact-area {
+		.section-title.mb-40 {
+			margin-bottom: 25px;
+		}
+	}
+	.special-offer-two {
+		.section-title.mb-40 {
+			margin-bottom: 25px;
+		}
+	}
+	.special-offer-area {
+		.section-title.mb-40 {
+			margin-bottom: 25px;
+		}
+	}
+	.video-bg {
+		.section-title.mb-40 {
+			margin-bottom: 25px;
+		}
+	}
+	.subscribe-bg {
+		.section-title.mb-30 {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+
+.about-area .section-title.mb-30,
+.experience-area .section-title.mb-30 {
+	@media #{max-lg} {
+		margin-bottom: 20px;
+	}
+}

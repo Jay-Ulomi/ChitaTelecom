@@ -1,0 +1,99 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.11 Signup css
+/*----------------------------------------*/
+.signup-main-wrapper{
+	max-width: 580px;
+	margin-right: auto !important;
+    margin-left: auto !important;
+	.signup-wrapper{
+		box-shadow: 0 30px 60px rgba(3,4,28,.1);
+		padding: 45px 40px;
+		text-align: center;
+		border-radius: 3px;
+		@media #{$xs}{
+			padding: 40px 25px;
+		}
+	}
+}
+.signup-title{
+	font-size: 28px;
+    font-weight: 600;
+     line-height: 1.3;
+     color: $black;
+	 margin-bottom: 35px;
+}
+.signin_icon{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	align-items: center;
+	a{
+		font-size: 20px;
+		color: $black;
+		margin-right: 8px;
+		transition: 0.3s;
+		height: 50px;
+		width: 50px;
+		display: inline-block;
+		border: 2px solid var(--bd-border-primary);
+		text-align: center;
+		line-height: 45px;
+		border-radius: 5px;
+		display: block;
+		&:hover{
+			color: var(--bd-common-white);
+			background: var(--bd-theme-primary);
+			border-color: var(--bd-theme-primary);
+		}
+	}
+}
+.signup-btn{
+	.fill_btn{
+		font-size: 16px;
+		color: var(--bd-common-white);
+		font-weight: 500;
+		background:  var(--bd-theme-primary);
+		padding: 0px 32px;
+		height: 60px;
+		width: 100%;
+		border-radius: 3px;
+		border: 0;
+		transition: .3s;
+		@media #{$xs}{
+			height: 50px;
+		}
+		&:hover{
+			background: var(--bd-theme-secondary);
+			color: var(--bd-common-white);
+		}
+	}
+}
+.ms-divided-btn {
+	text-align: center;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		background: var(--bd-border-primary);
+		inset-inline-start: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	span{
+		background: #fff;
+		padding: 0 20px;
+		position: relative;
+		color: $black;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+  }
+.signup-area{
+	.contact-form{
+		margin-bottom: 0px;
+	}
+}

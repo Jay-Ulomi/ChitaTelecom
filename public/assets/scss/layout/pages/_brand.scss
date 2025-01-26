@@ -1,0 +1,29 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 Brand css
+/*----------------------------------------*/
+.brand-active {
+	.col {
+		padding: 0 15px;
+	}
+}
+.brand-item {
+	text-align: center;
+	a {
+		display: inline-block;
+		&:hover {
+			img {
+				opacity: 1;
+				filter: grayscale(0) brightness(1) contrast(1);
+				-webkit-filter: grayscale(0) brightness(1) contrast(1);
+			}
+		}
+	}
+	img {
+		display: inline-block;
+		opacity: .3;
+		filter: grayscale(1) brightness(0) contrast(0);
+		-webkit-filter: grayscale(1) brightness(0) contrast(0);
+	}
+}

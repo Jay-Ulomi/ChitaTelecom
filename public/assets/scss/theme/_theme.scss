@@ -1,0 +1,356 @@
+@use '../utils' as *;
+
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Netfix - Broadband & Internet HTML Template
+	Support: https://support.bdevs.net/
+	Author: BDevs
+	Description: Netfix - Broadband & Internet HTML Template.
+	Version: 1.1
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Mixins
+		1.2 Root
+		1.3 Typography
+		1.4 Extends
+		1.5 Colors
+		1.6 Breakpoint
+		
+	-----------------
+    02. COMPONENTS CSS
+	-----------------
+		2.1 Animations
+		2.2 Breadcrumb
+		2.3 Buttons
+		2.4 Pagination
+		2.5 Placeholder 
+		2.6 scroll top
+		2.7 Section Title
+
+	-----------------
+    03. HEADER CSS
+	-----------------
+	    3.1 Header Style 01
+	    3.2 Header Style 02
+
+    ---------------------------------
+	04. MENU CSS
+	---------------------------------
+		4.1 Menu
+		4.2 Mobile Menu
+
+	---------------------------------
+	05. BLOG CSS
+	---------------------------------
+		5.1 Blog css
+		5.2 Comments css
+		5.3 Recent Post css
+		5.4 Sidebar css
+
+	---------------------------------
+	06. FOOTER CSS
+	---------------------------------
+		6.1 Footer Style 01
+		6.2 Footer Copyright
+
+	---------------------------------
+	07. PAGES CSS
+	---------------------------------
+		7.1 About css
+		7.2 Brand css
+		7.3 Contact css
+		7.4 Counter css
+		7.5 Cta css
+		7.6 Error css
+		7.7 Faq css
+	7.8 Offer css
+		7.9 Pricing css
+		7.10 ProgressBar css
+		7.11 Services css
+		7.12 Shop css
+		7.13 Streaming css
+		7.14 Subcribe css
+		7.15 Team css
+		7.16 Video css
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+// Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*==============================================
+2. Theme default css
+================================================*/
+body {
+	font-family: var(--bd-ff-body);
+	font-weight: normal;
+	font-size: 16px;
+	color: var(--bd-text-body);
+	font-style: normal;
+}
+img,
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: .3s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.btn:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+}
+img{
+
+}
+a:hover,
+.portfolio-cat a:hover,
+.footer-menu li a:hover {
+	color: var(--bd-theme-primary);
+	text-decoration: none;
+}
+a,
+button {
+	color: var(--bd-theme-primary);
+	outline: medium none;
+	text-decoration: none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-heading);
+	color: var(--bd-heading-primary);
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 500;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.75;
+	color: var(--paragraph-text-color);
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: var(--bd-text-body);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: var(--bd-theme-primary);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+::-moz-selection {
+	background: var(--bd-theme-primary);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+::selection {
+	background: var(--bd-theme-primary);
+	color: var(--bd-common-white);
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: var(--bd-theme-primary);
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 16px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+
+// Bootstrap customize 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    --bs-gutter-x: 30px;
+}
+.row.g-0 {
+	--bs-gutter-x: 0;
+}
+.gutter-y-30 {
+  	--bs-gutter-y: 30px;
+}
+[class*="flaticon-"] {
+	display: inline-block;
+	line-height: 0;
+}
+
+.custom-container {
+	max-width: 1790px;
+	@media #{$xl} {
+		max-width: 960px;
+	}
+}
+/* Extra large devices (large desktops, 1800px and up) */
+@media (max-width: 1500px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+		max-width: 1320px;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1199.98px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm {
+		max-width: 960px;
+	}
+	.custom-container {
+		max-width: 960px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) {
+	.container,
+	.container-md,
+	.container-sm,
+	.custom-container {
+		max-width: 720px;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+	.container,
+	.container-md,
+	.container-sm,
+	.custom-container {
+		max-width: 540px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

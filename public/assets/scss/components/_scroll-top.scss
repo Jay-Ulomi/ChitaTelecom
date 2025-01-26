@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.6 scroll top
+/*----------------------------------------*/
+/* scrollUp */
+.scroll-top {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 105%;
+	right: 50px;
+	font-size: 16px;
+	border-radius: 50%;
+	z-index: 99;
+	color: var(--bd-common-white);
+	text-align: center;
+	cursor: pointer;
+	background: var(--bd-theme-primary);
+	transition: 1s ease;
+	border: none;
+	opacity: 0;
+	@media #{$max-sm} {
+		right: 15px;
+	}
+	&.open {
+		opacity: 1;
+		bottom: 30px;
+		@media #{$max-sm} {
+			bottom: 20px;
+		}
+	}
+	&::after {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		top: 100%;
+		left: 5%;
+		height: 10px;
+		width: 90%;
+		opacity: 1;
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+	}
+	&:hover {
+		background: var(--bd-theme-secondary);
+	}
+}

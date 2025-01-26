@@ -1,0 +1,25 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.6 Copyright Style 1
+/*----------------------------------------*/
+
+.copyright-wrap {
+	padding: 14px 0;
+	background: var(--bd-heading-primary);
+	@media #{$max-sm} {
+		padding: 25px 0;
+	}
+}
+.copyright-text {
+	p {
+		color: #E1E6EE;
+		margin-bottom: 0;
+		a{
+			color: #E1E6EE;
+			&:hover{
+				color: var(--bd-theme-primary);
+			}
+		}
+	}
+}

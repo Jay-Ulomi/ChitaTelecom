@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.7 Section Title
+/*----------------------------------------*/
+.section-title {
+	.title {
+		font-size: 50px;
+		line-height: 1.2;
+		margin-bottom: 0;
+		@media #{$lg} {
+			font-size: 36px;
+		}
+		@media #{$md} {
+			font-size: 40px;
+		}
+		@media #{$sm} {
+			font-size: 35px;
+		}
+		@media #{$xs} {
+			font-size: 28px;
+		}
+		@media #{$xxs} {
+			font-size: 28px;
+		}
+	}
+}
+.section-title-btn {
+	@media #{$max-sm} {
+		margin-top: 20px;
+	}
+}

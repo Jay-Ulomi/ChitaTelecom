@@ -1,0 +1,70 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.10 ProgressBar css
+/*----------------------------------------*/
+.progress-item {
+	margin-bottom: 30px;
+	.title {
+		display: block;
+		font-size: 15px;
+		line-height: 1;
+		margin-bottom: 12px;
+		color: var(--bd-heading-primary);
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.progress--bar {
+	position: relative;
+	overflow: visible;
+	background: transparent;
+}
+.progress-number {
+	position: absolute;
+	bottom: 16px;
+	font-size: 15px;
+	line-height: 1;
+	color: var(--bd-heading-primary);
+	transform: translateX(-100%);
+}
+.progress-bg {
+	height: 5px;
+	background: #EEF2F9;
+	overflow: hidden;
+}
+.progress-fill {
+	height: 5px;
+	background: var(--bd-theme-primary);
+	width: 0%;
+}
+.experience-content {
+	& > p {
+		margin-bottom: 45px;
+		@media #{$max-lg} {
+			margin-bottom: 35px;
+		}
+	}
+}
+.progress-video {
+	margin-left: 30px;
+	position: relative;
+	@media #{$max-lg} {
+		max-width: 600px;
+		margin: 0 auto 40px;
+	}
+	@media #{$max-sm} {
+		margin: 0 auto 30px;
+	}
+	.video-paly {
+		a {
+			width: 70px;
+			height: 70px;
+			&::before {
+				width: 70px;
+				height: 70px;
+			}
+		}
+	}
+}

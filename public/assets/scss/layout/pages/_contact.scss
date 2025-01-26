@@ -1,0 +1,206 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  7.3 Contact css
+/*----------------------------------------*/
+
+.contact-title {
+	& > .title {
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
+}
+.contact-form {
+	margin-right: 20px;
+	@media #{$max-lg} {
+		margin-right: 0;
+		margin-bottom: 50px;
+	}
+	.form-grp {
+		position: relative;
+		margin-bottom: 30px;
+		input[type=number] {
+			-moz-appearance: textfield;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+		label {
+			position: absolute;
+			cursor: text;
+			z-index: 2;
+			top: 18px;
+			left: 10px;
+			font-size: 15px;
+			font-weight: 400;
+			background: var(--bd-common-white);
+			padding: 0 10px;
+			color: var(--bd-text-body);
+			transition: all .3s ease;
+		}
+		textarea {
+			height: 170px;
+		}
+	}
+	.nice-selet{
+		appearance: none;
+		-moz-appearance: none;
+	}
+	.form-select {
+		font-size: 15px;
+		color: var(--bd-text-body);
+		border-radius: 3px;
+		height: 60px;
+		padding: 14px 20px;
+		outline: none !important;
+		box-shadow: none !important;
+		background-color: var(--bd-common-white);
+		border: 1px solid var(--bd-border-primary);
+		width: 100%;
+		background: none;
+		line-height: 30px;
+		&::after {
+			border-bottom: 1px solid $black;
+			border-right: 1px solid $black;
+			height: 7px;
+			width: 7px;
+		}
+		.list{
+			width: 100%;
+		}
+	}
+	[type=submit] {
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+	}
+}
+.contact-form .form-grp input,
+.contact-form .form-grp textarea {
+	display: block;
+	width: 100%;
+	height: 60px;
+	background: var(--bd-common-white);
+	border: 1px solid var(--bd-border-primary);
+	padding: 15px 20px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+.contact-form .form-grp input:focus,
+.contact-form .form-grp textarea:focus,
+.contact-form .form-select:focus {
+	border-color: var(--bd-theme-primary);
+}
+.contact-form .form-grp input::-webkit-outer-spin-button,
+.contact-form .form-grp input::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
+	margin: 0;
+}
+.contact-form .form-grp input:focus + label,
+.contact-form .form-grp input:valid + label,
+.contact-form .form-grp textarea:focus + label,
+.contact-form .form-grp textarea:valid + label {
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--bd-heading-primary);
+	top: -11px;
+}
+.contact-form-check {
+	[type=checkbox] {
+		margin-top: 3px;
+	}
+	label {
+		line-height: 1.65;
+		a {
+			font-weight: 500;
+			text-decoration: underline;
+			&:hover {
+				color: var(--bd-theme-secondary);
+			}
+		}
+	}
+}
+.contact-info-wrap {
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-bottom: 1px dashed #C4CEDC;
+	&:last-child {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	p {
+		margin-bottom: 0;
+		& > a {
+			text-decoration: underline;
+			font-weight: 500;
+		}
+	}
+}
+.contact-info-title {
+	font-size: 22px;
+	margin-bottom: 12px;
+}
+.contact-info-list {
+	margin-top: 25px;
+	li {
+		display: flex;
+		align-items: flex-start;
+		& + li {
+			margin-top: 17px;
+		}
+		i {
+			color: var(--bd-theme-primary);
+			font-size: 18px;
+			margin-right: 15px;
+			margin-top: 3px;
+		}
+		a {
+			&:hover {
+				color: var(--bd-theme-primary);
+			}
+		}
+	}
+}
+.contact-info-list li a,
+.contact-info-list li span {
+	color: var(--bd-heading-primary);
+}
+.live-chat {
+	display: flex;
+	align-items: center;
+	margin-top: 22px;
+	.icon {
+		font-size: 28px;
+		line-height: 0;
+		color: var(--bd-theme-primary);
+		margin-right: 14px;
+	}
+	.live-chat-link {
+		font-size: 16px;
+		font-weight: 500;
+		text-decoration: underline;
+	}
+}
+#contact-map {
+	width: 100%;
+	height: 640px;
+	@media #{$max-sm} {
+		height: 350px;
+	}
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}

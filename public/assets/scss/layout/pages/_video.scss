@@ -1,0 +1,127 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.16 Video css
+/*----------------------------------------*/
+.video-bg {
+	background-position: center;
+	background-size: cover;
+	padding: 110px 0 120px;
+	@media #{$max-md} {
+		background-position: right center;
+		padding: 145px 0 120px;
+	}
+	@media #{$md} {
+		padding: 80px 0px;
+	}
+	@media #{$sm,$xs} {
+		padding: 70px 0px;
+	}
+}
+.video-paly {
+	@media #{$max-md} {
+		margin-bottom: 60px;
+	}
+	a {
+		display: block;
+		width: 80px;
+		height: 80px;
+		background: var(--bd-common-white);
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		font-size: 18px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		position: relative;
+		color: var(--bd-theme-primary);
+		@media #{$max-md} {
+			background: var(--bd-theme-primary);
+			color: #fff;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			border: 1px solid var(--bd-common-white);;
+			border-radius: 50%;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			animation: ripple 2s linear infinite;
+			@media #{$max-md} {
+				border-color: var(--bd-theme-primary);
+			}
+		}
+		&:hover {
+			background: var(--bd-theme-primary);
+			color: var(--bd-common-white);
+		}
+	}
+}
+.video-content-wrap {
+	& > p {
+		margin-bottom: 0;
+	}
+}
+.fact-wrap {
+	margin-top: 40px;
+	margin-bottom: 17px;
+}
+.fact-item {
+	margin-bottom: 30px;
+	.title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		color: var(--bd-theme-primary);
+		margin-bottom: 4px;
+	}
+	p {
+		font-size: 18px;
+		font-weight: 500;
+		color: var(--bd-heading-primary);
+		line-height: 1.4;
+		margin-bottom: 0;
+		@media #{$xs,$sm,$md,$lg} {
+			font-size: 16px;
+		}
+	}
+}
+.fact-img-wrap {
+	position: relative;
+	margin-right: 30px;
+	@media #{$lg} {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	@media #{$max-md} {
+		max-width: 601px;
+		margin: 0 auto 30px;
+	}
+	.small-img {
+		position: absolute;
+		right: 0;
+		bottom: 5%;
+		border: 15px solid var(--bd-common-white);;
+		border-right: none;
+		z-index: 1;
+		@media #{$max-sm} {
+			border: 10px solid #fff;
+			max-width: 50%;
+			border-right: none;
+		}
+		@media #{$xs} {
+			max-width: 245px;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.6 Error css
+/*----------------------------------------*/
+.error-img {
+	img {
+		max-width: 470px;
+		@media #{$xs} {
+			max-width: 380px;
+		}
+		@media #{$xxs} {
+			max-width: 100%;
+		}
+	}
+}
+.error-content {
+	padding: 0 30px;
+	@media #{max-lg} {
+		padding: 0 0px;
+	}
+	.title {
+		font-size: 36px;
+		margin-bottom: 22px;
+	}
+	p {
+		margin-bottom: 45px;
+		color: var(--bd-heading-primary);
+	}
+}

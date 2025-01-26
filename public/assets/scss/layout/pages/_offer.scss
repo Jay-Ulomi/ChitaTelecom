@@ -1,0 +1,252 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 Offer css
+/*----------------------------------------*/
+.special-offer-content {
+	& > p {
+		margin-bottom: 0;
+	}
+}
+.special-price-wrap {
+	@media #{$max-md} {
+		margin: 35px 0 45px;
+	}
+	@media #{$max-sm} {
+		display: block;
+	}
+	display: flex;
+	align-items: center;
+	margin: 45px 0 48px;
+	@media #{max-lg} {
+		margin: 30px 0 40px;
+	}
+	.trial-link {
+		margin-bottom: 0;
+		display: flex;
+		align-items: center;
+		i {
+			color: var(--bd-theme-primary);
+			font-size: 44px;
+			margin-right: 20px;
+		}
+		a {
+			color: var(--bd-heading-primary);
+			font-size: 16px;
+			font-weight: 500;
+			text-decoration: underline;
+			&:hover {
+				color: var(--bd-theme-primary);
+			}
+		}
+	}
+}
+.special-price {
+	margin-bottom: 0;
+	font-size: 58px;
+	line-height: .8;
+	display: flex;
+	color: var(--bd-theme-primary);
+	margin-right: 55px;
+	@media #{$max-sm} {
+		margin-bottom: 20px;
+	}
+	sup {
+		font-size: 16px;
+		top: .55em;
+		align-self: flex-start;
+		color: var(--bd-heading-primary);
+	}
+	sub {
+		bottom: .85em;
+		align-self: flex-end;
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--bd-text-body);
+		margin-left: 10px;
+	}
+}
+.special-offer-img {
+	text-align: right;
+	padding-left: 80px;
+	position: relative;
+	@media #{$max-md} {
+		padding-left: 80px;
+		padding-right: 80px;
+		margin-bottom: 50px;
+	}
+	@media #{$max-sm} {
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 35px;
+	}
+	@media #{$xs} {
+		padding-left: 30px;
+	}
+	img {
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+	}
+}
+.special-offer-text {
+	position: absolute;
+	left: 127px;
+	top: 0;
+	width: 126px;
+	height: 126px;
+	background: var(--bd-heading-primary);
+	border-radius: 50%;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--bd-common-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1.45;
+	padding: 20px;
+	z-index: 2;
+	@media #{$max-sm} {
+		left: 8%;
+		width: 100px;
+		height: 100px;
+		font-size: 14px;
+	}
+	@media #{$max-sm} {
+		left: 13%;;
+	}
+}
+.special-offer-mbps {
+	position: absolute;
+	left: 30px;
+	top: 87px;
+	width: 207px;
+	height: 207px;
+	background: var(--bd-theme-primary);
+	color: var(--bd-common-white);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	z-index: 1;
+	@media #{$lg} {
+		left: 0;
+		top: 60px;
+		width: 175px;
+		height: 175px;
+	}
+	@media #{$md} {
+		left: 30px;
+		top: 87px;
+		width: 175px;
+		height: 175px;
+	}
+	@media #{$max-sm} {
+		left: 0;
+		top: 90px;
+		width: 150px;
+		height: 150px;
+	}
+	& > span {
+		display: block;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1;
+		margin-bottom: 6px;
+		width: 100%;
+		@media #{$md,$lg} {
+			font-size: 24px;
+		}
+		@media #{$max-sm} {
+			font-size: 16px;
+		}
+	}
+	.title {
+		color: var(--bd-common-white);
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 0;
+		width: 100%;
+		@media #{$md,$lg} {
+			font-size: 40px;
+		}
+		@media #{$max-sm} {
+			font-size: 34px;
+		}
+	}
+	p {
+		color: var(--bd-common-white);
+		margin-bottom: 0;
+		font-size: 18px;
+		text-transform: uppercase;
+		width: 100%;
+		@media #{$md,$lg} {
+			font-size: 15px;
+		}
+		@media #{$max-md} {
+			font-size: 14px;
+		}
+	}
+}
+.special-offer-two {
+	@media #{$max-md} {
+		margin: 35px 0 0px;
+	}
+	.special-offer-img {
+		text-align: center;
+		padding: 0 30px 0 50px;
+		@media #{$xs,$sm,$md,$lg} {
+			margin-bottom: 20px;
+			padding: 0 30px 0 0;
+		}
+		@media #{$max-md} {
+			padding: 0 0;
+			max-width: 550px;
+			margin: 0 auto 50px
+		}
+		@media #{$max-sm} {
+			margin: 0 auto 30px;
+		}
+	}
+	.special-offer-mbps {
+		left: 0;
+		@media #{$max-sm}{
+			top: 75px;
+		}
+	}
+	.special-offer-text {
+		left: 97px;
+		@media #{$lg} {
+		    top: -20px;
+		}
+		@media #{$max-md} {
+			top: 0;
+		}
+		@media #{$max-sm} {
+			left: 13%;
+		}
+	}
+	.special-price-wrap {
+		@media #{$xs,$sm,$md,$lg} {
+		    margin: 30px 0 40px;
+		}
+	}
+}
+.special-offer-area .special-price-wrap {
+	@media #{$max-md} {
+		margin: 35px 0 45px;
+	}
+}

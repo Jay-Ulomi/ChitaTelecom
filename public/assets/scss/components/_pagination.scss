@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.4 Pagination
+/*----------------------------------------*/
+.pagination-wrap {
+	.pagination {
+		flex-wrap: wrap;
+		@media #{$max-lg} {
+			justify-content: center;
+		}
+		li {
+			margin-right: 20px;
+			margin-top: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				border: 1px solid var(--bd-border-primary);
+				border-radius: 3px;
+				font-size: 18px;
+				color: var(--bd-heading-primary);
+			}
+		}
+	}
+}
+.pagination-wrap {
+	.pagination {
+		li.active {
+			a {
+				border-color: var(--bd-theme-primary);
+				background: var(--bd-theme-primary);
+				color: var(--bd-common-white);
+			}
+		}
+		li {
+			@media #{$max-sm} {
+				margin-right: 10px;
+			}
+			a {
+				&:hover {
+					border-color: var(--bd-theme-primary);
+					background: var(--bd-theme-primary);
+					color: var(--bd-common-white);
+				}
+			}
+		}
+	}
+}

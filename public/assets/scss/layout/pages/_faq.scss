@@ -1,0 +1,90 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  7.6 Error css
+/*----------------------------------------*/
+.faq-map-area {
+	@media #{$max-md} {
+		margin-top: 50px;
+	}
+}
+.accordion-item {
+	border: 1px solid var(--bd-border-primary);
+}
+.accordion-button {
+	@media #{$max-sm} {
+		align-items: baseline;
+	}
+	color: var(--bd-heading-primary);
+	padding: 17px 25px;
+	font-size: 18px;
+	line-height: 1.45;
+	@media #{$xs}{
+		padding: 17px 10px;
+	}
+	&:not(.collapsed) {
+		color: var(--bd-heading-primary);
+		background-color: transparent;
+		box-shadow: none;
+	}
+	&:focus {
+		border-color: #86b7fe;
+		outline: 0;
+		box-shadow: none;
+	}
+	&::after {
+		display: none;
+	}
+	&::before {
+		content: "\f067";
+		font-size: 16px;
+		font-family: var(--bd-ff-fontawesome);
+		font-weight: 400;
+		transition: .3s ease-in;
+		margin-right: 25px;
+	}
+	&:not(.collapsed)::before {
+		content: "\f068";
+	}
+}
+.accordion-body {
+	padding: 13px 25px 30px;
+	border-top: 1px solid #E1E6EE;
+	line-height: 1.75;
+}
+.faq-map-title {
+	margin-bottom: 28px;
+	.title {
+		font-size: 30px;
+		margin-bottom: 16px;
+	}
+	p {
+		width: 75%;
+		margin-bottom: 0;
+		@media #{$max-sm} {
+			width: 100%;
+		}
+	}
+}
+.faq-map {
+	.map-btn {
+		background: #16BE8A;
+		text-transform: capitalize;
+		&::after {
+			display: none;
+		}
+	}
+}
+.section-desc {
+	p {
+		margin-bottom: 0;
+	}
+}
+.faq-title-wrap {
+	.section-desc {
+		@media #{$max-md} {
+			margin-top: 15px;
+		}
+	}
+}
+
