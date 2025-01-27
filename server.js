@@ -9,6 +9,7 @@ const PORT = 3030;
 
 // Import routes
 const homeRoutes = require('./routes/HomeRoutes');
+const serviceRoutes = require('./routes/serviceRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 
 
@@ -26,6 +27,7 @@ app.use(express.static('public'));
 
 // Use routes
 app.use('/', homeRoutes);
+app.use('/service', serviceRoutes);
 app.use('/contact', contactRoutes);
 
 // Start the server

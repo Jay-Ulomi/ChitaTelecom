@@ -1,0 +1,195 @@
+{
+    "services": [
+      {
+        "id": 1,
+        "title": "Broadband Connection",
+        "description": "All kinds of laptop, desktop computer servicing center. It is a long established fact that a reader will be distracted by the readable computer disk. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "image": "assets/imgs/images/services_details01.jpg",
+        "features": [
+          "Single Device Uses",
+          "Internet Connection",
+          "Phone & Computer",
+          "Broadband Success"
+        ],
+        "video": {
+          "image": "assets/imgs/images/services_details02.jpg",
+          "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+        },
+        "faq": [
+          {
+            "question": "Do I have to be an existing T-Mobile customer?",
+            "answer": "Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices in your home simultaneously."
+          },
+          {
+            "question": "What is a commercial on-line service?",
+            "answer": "Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices in your home simultaneously."
+          },
+          {
+            "question": "How much does the T-Mobile Home Internet plan cost?",
+            "answer": "Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices in your home simultaneously."
+          },
+          {
+            "question": "How can I get Internet for my business?",
+            "answer": "Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices in your home simultaneously."
+          },
+          {
+            "question": "When do you expect to roll out more markets?",
+            "answer": "Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices in your home simultaneously."
+          }
+        ],
+        "download": [
+          {
+            "name": "Service Brochure",
+            "file": "assets/docs/service_brochure.pdf",
+            "type": "PDF",
+            "size": "13 MB"
+          },
+          {
+            "name": "Company Profile",
+            "file": "assets/docs/company_profile.doc",
+            "type": "Word",
+            "size": "25 MB"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Wi-Fi Internet",
+        "description": "Experience high-speed internet with our Wi-Fi service. Perfect for home or office use.",
+        "image": "assets/imgs/images/services_details01.jpg",
+        "features": [
+          "High-Speed Connection",
+          "Multiple Devices Support",
+          "24/7 Customer Support"
+        ],
+        "video": {
+          "image": "assets/imgs/images/services_details02.jpg",
+          "url": "https://www.youtube.com/watch?v=XHOmBV4js_E"
+        },
+        "faq": [
+          {
+            "question": "Do I need to purchase a router?",
+            "answer": "Yes, you can either use your own router or purchase one from us."
+          },
+          {
+            "question": "Is installation free?",
+            "answer": "Yes, we offer free installation for all new customers."
+          }
+        ],
+        "download": [
+          {
+            "name": "Wi-Fi Setup Guide",
+            "file": "assets/docs/wi_fi_setup.pdf",
+            "type": "PDF",
+            "size": "10 MB"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Mobile Connection",
+        "description": "Fast and reliable mobile data services tailored to your needs. Stay connected wherever you go.",
+        "image": "assets/imgs/images/services_details01.jpg",
+        "features": [
+          "Nationwide Coverage",
+          "Unlimited Data Plans",
+          "Hotspot Capabilities"
+        ],
+        "video": {
+          "image": "assets/imgs/images/services_details02.jpg",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        "faq": [
+          {
+            "question": "What type of mobile devices are supported?",
+            "answer": "All major brands such as Apple, Samsung, Huawei, etc. are supported."
+          },
+          {
+            "question": "How can I change my plan?",
+            "answer": "You can change your plan at any time by visiting our customer portal or calling customer service."
+          }
+        ],
+        "download": [
+          {
+            "name": "Mobile Data Plan Options",
+            "file": "assets/docs/mobile_data_plan.pdf",
+            "type": "PDF",
+            "size": "8 MB"
+          },
+          {
+            "name": "Mobile Coverage Area",
+            "file": "assets/docs/coverage_area_map.pdf",
+            "type": "PDF",
+            "size": "5 MB"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Tech Support Services",
+        "description": "Expert support for troubleshooting, repairs, and installation of all your tech devices.",
+        "image": "assets/imgs/images/services_details01.jpg",
+        "features": [
+          "24/7 Support",
+          "Expert Technicians",
+          "Remote Assistance Available"
+        ],
+        "video": {
+          "image": "assets/imgs/images/services_details02.jpg",
+          "url": "https://www.youtube.com/watch?v=3JZ_D3ELwOQ"
+        },
+        "faq": [
+          {
+            "question": "What types of issues can your tech support help with?",
+            "answer": "We offer help with software issues, hardware repairs, and network setup."
+          },
+          {
+            "question": "How do I contact tech support?",
+            "answer": "You can contact us through our support number or email."
+          }
+        ],
+        "download": [
+          {
+            "name": "Tech Support Guide",
+            "file": "assets/docs/tech_support_guide.pdf",
+            "type": "PDF",
+            "size": "7 MB"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Business Solutions",
+        "description": "Tailored IT solutions for businesses, including networking, cloud storage, and security systems.",
+        "image": "assets/imgs/images/services_details01.jpg",
+        "features": [
+          "Custom IT Solutions",
+          "Cloud Backup",
+          "Business Security Systems"
+        ],
+        "video": {
+          "image": "assets/imgs/images/services_details02.jpg",
+          "url": "https://www.youtube.com/watch?v=4XZVZm6t8Lg"
+        },
+        "faq": [
+          {
+            "question": "Can I upgrade my current service to a business solution?",
+            "answer": "Yes, we offer various upgrade options for small to medium businesses."
+          },
+          {
+            "question": "Do you offer cloud storage?",
+            "answer": "Yes, we offer scalable cloud storage solutions for your business needs."
+          }
+        ],
+        "download": [
+          {
+            "name": "Business Solutions Catalog",
+            "file": "assets/docs/business_solutions.pdf",
+            "type": "PDF",
+            "size": "15 MB"
+          }
+        ]
+      }
+    ]
+  }
+  

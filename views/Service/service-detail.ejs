@@ -1,0 +1,134 @@
+<!-- breadcrumb-area -->
+<section class="breadcrumb-area breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8">
+                <div class="breadcrumb-content">
+                    <h3 class="title">Broadband</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/service/service">Service</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Broadband Connection</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb-area-end -->
+
+<!-- services-details -->
+<div class="services-details-area section-space-top section-meadium-bottom">
+    <div class="container">
+        <div class="row services-details-wrap">
+            <div class="col-4">
+                <aside class="services-sidebar">
+                    <div class="widget services-widget">
+                        <ul class="services-sidebar-list">
+                            <!-- Loop through the services and display the list dynamically -->
+                            <% services.forEach(service => { %>
+                                <li class="<%= service.id === currentService.id ? 'active' : '' %>">
+                                    <a href="/service/service-detail/<%= service.id %>">
+                                        <span class="count"><%= service.id %>.</span> <%= service.title %>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    <div class="widget sidebar-doc-download">
+                        <h5 class="title"><span>Download</span></h5>
+                        <ul class="services-doc-list">
+                            <li>
+                                <div class="icon"><img src="assets/imgs/icons/pdf.png" alt=""></div>
+                                <div class="content">
+                                    <h6 class="title"><a href="#">Service Brochure</a></h6>
+                                    <span>PDF <small>|</small> 13 MB</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon"><img src="assets/imgs/icons/doc.png" alt=""></div>
+                                <div class="content">
+                                    <h6 class="title"><a href="#">Company Profile</a></h6>
+                                    <span>Word <small>|</small> 25 MB</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-8">
+                <!-- Service Details Image -->
+                <div class="services-details-img">
+                    <img src="<%= currentService.image %>" alt="">
+                </div>
+                <div class="services-details-content">
+                    <h2 class="title"><%= currentService.title %></h2>
+                    <p><%= currentService.description %></p>
+                    <figure>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-7">
+                                <p><%= currentService.additional_details %></p>
+                                <div class="services-chart">
+                                    <img src="assets/imgs/images/services_chart.svg" alt="">
+                                </div>
+                                <ul class="services-growth-list">
+                                    <% currentService.features.forEach(feature => { %>
+                                        <li><img src="assets/imgs/icons/check.png" alt=""> <%= feature %></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+                            <div class="col-xl-6 col-md-5">
+                                <div class="services-details-video">
+                                    <img src="<%= currentService.image %>" alt="">
+                                    <div class="video-paly">
+                                        <a href="<%= currentService.video_url %>" class="popup-video"><i class="fas fa-play"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                    <p><%= currentService.additional_info %></p>
+                    <div class="services-faq-wrap">
+                        <div class="faq-wrapper">
+                            <div class="accordion" id="accordionExample">
+                                <!-- Loop through service questions and answers -->
+                                <% currentService.faq.forEach(faq => { %>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading<%= faq.id %>">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse<%= faq.id %>"
+                                                aria-expanded="true" aria-controls="collapse<%= faq.id %>">
+                                                <%= faq.question %>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<%= faq.id %>" class="accordion-collapse collapse"
+                                            aria-labelledby="heading<%= faq.id %>" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <%= faq.answer %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-details-bottom">
+                        <a href="/contact/contact" class="btn">Contact Us</a>
+                        <div class="footer-call">
+                            <div class="icon">
+                                <i class="flaticon-support"></i>
+                            </div>
+                            <div class="content">
+                                <span>Call For Help</span>
+                                <h6 class="title"><a href="tel:+255 753 591 743">+255 753 591 743</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- services-details-end -->
