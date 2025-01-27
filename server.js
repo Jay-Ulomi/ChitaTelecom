@@ -11,6 +11,8 @@ const PORT = 3030;
 const homeRoutes = require('./routes/HomeRoutes');
 const serviceRoutes = require('./routes/serviceRoutes');
 const contactRoutes = require('./routes/contactRoutes');
+const planRoutes = require('./routes/planRoutes');
+const aboutRoutes = require('./routes/aboutRoutes');
 
 
 // Middleware to parse form data
@@ -29,6 +31,8 @@ app.use(express.static('public'));
 app.use('/', homeRoutes);
 app.use('/service', serviceRoutes);
 app.use('/contact', contactRoutes);
+app.use('/plan', planRoutes);
+app.use('/about', aboutRoutes);
 
 // Start the server
 app.listen(PORT, () => {

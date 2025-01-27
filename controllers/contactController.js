@@ -1,4 +1,11 @@
 const nodemailer = require('nodemailer');
+
+// GET: Display contact form
+exports.getContact = (req, res) => {
+    res.render('Contact/contact');
+  };
+  
+  // POST: Submit contact form
 exports.submitContactForm = async (req, res) => {
     const { name, email, subject, message } = req.body;
   
