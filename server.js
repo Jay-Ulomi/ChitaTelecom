@@ -38,7 +38,7 @@ app.use('/fqn', fqnRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {
-    res.status(404).send("Sorry can't find that!")
+    res.status(404).render("404/404")
   });
 
 // Start the server
