@@ -621,7 +621,7 @@ label {
 /*  2.2 Breadcrumb
 /*----------------------------------------*/
 .breadcrumb-bg {
-  background-image: url("../imgs/bg/breadcrumb_bg.jpg");
+  background-image: url("../imgs/bg/breadcrumb_bg.png");
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -6839,7 +6839,7 @@ label {
   line-height: 1;
   margin-bottom: 0;
   color: var(--bd-theme-secondary);
-  font-size: 52px;
+  font-size: 30px;
   position: relative;
   border: 2.5px solid var(--bd-theme-secondary);
   border-radius: 10px;
