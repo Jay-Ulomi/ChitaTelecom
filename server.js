@@ -14,6 +14,10 @@ const contactRoutes = require('./routes/contactRoutes');
 const planRoutes = require('./routes/planRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
 const fqnRoutes = require('./routes/fqnRoutes');
+const CodeRoutes = require('./routes/codeRoutes');
+const HelthRoutes = require('./routes/HelthRoutes');
+const PrivacyRoutes = require('./routes/PrivacyRoutes');
+const TermsRoutes = require('./routes/TermsRoutes');
 
 
 // Middleware to parse form data
@@ -35,6 +39,10 @@ app.use('/contact', contactRoutes);
 app.use('/plan', planRoutes);
 app.use('/about', aboutRoutes);
 app.use('/fqn', fqnRoutes);
+app.use('/code', CodeRoutes);
+app.use('/helth', HelthRoutes);
+app.use('/privacy', PrivacyRoutes);
+app.use('/terms', TermsRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {
