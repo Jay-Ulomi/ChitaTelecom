@@ -4846,6 +4846,8 @@ label {
   text-align: center;
   border: 1px solid var(--bd-border-primary);
   padding: 35px 50px;
+  height:fit-content;
+
 }
 @media max-lg {
   .pricing-three-item {
@@ -4926,7 +4928,7 @@ label {
 
 .pricing-three-price {
   display: flex;
-  font-size: 40px;
+  font-size: 35px;
   margin: 35px 0 40px;
   justify-content: center;
   line-height: 0.75;
