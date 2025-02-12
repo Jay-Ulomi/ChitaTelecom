@@ -26,35 +26,35 @@
                 <div class="contact-title">
                     <h3 class="title">Get in Touch with Chita Telecom</h3>
                 </div>
-                <form action="#" class="contact-form">
+                <form method="post" id="contactForm" class="contact-form">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-grp">
-                                <input type="text" id="name" autocomplete="off" required>
+                                <input type="text" name="name" id="name" autocomplete="off" required>
                                 <label for="name">First Name*</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grp">
-                                <input type="number" id="phone" autocomplete="off" required>
+                                <input type="number" name="phone" id="phone" autocomplete="off" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grp">
-                                <input type="email" id="email" autocomplete="off" required>
+                                <input type="email" name="email" id="email" autocomplete="off" required>
                                 <label for="email">Email*</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-grp">
-                                <select class="form-select mb-30" aria-label="Default select example">
-                                    <option selected disabled>Subject</option>
-                                    <option value="1">Broadband Connection</option>
-                                    <option value="2">Wi-Fi Internet</option>
-                                    <option value="3">Satellite TV Box</option>
-                                    <option value="4">Netflix TV Box</option>
-                                    <option value="5">Mobile Connection</option>
+                                <select class="form-select mb-30" name="subject" id="subject" required>
+                                    <option selected disabled value="">Select Subject*</option>
+                                    <option value="Broadband Connection">Broadband Connection</option>
+                                    <option value="Wi-Fi Internet">Wi-Fi Internet</option>
+                                    <option value="Satellite TV Box">Satellite TV Box</option>
+                                    <option value="Netflix TV Box">Netflix TV Box</option>
+                                    <option value="Mobile Connection">Mobile Connection</option>
                                 </select>
                             </div>
                         </div>
@@ -64,11 +64,14 @@
                         <label for="message">Message*</label>
                     </div>
                     <p class="contact-form-check">
-                        <input type="checkbox" class="form-check-input" id="cookies-consent">
-                        <label for="cookies-consent" class="form-check-label">I agree that my data is being stored for further contact. View our <a href="/privacy">Privacy Policy</a></label>
+                        <input type="checkbox" class="form-check-input" id="cookies-consent" required>
+                        <label for="cookies-consent" class="form-check-label">
+                            I agree that my data is being stored for further contact. View our <a href="/privacy">Privacy Policy</a>
+                        </label>
                     </p>
                     <button type="submit" class="btn">Submit Message</button>
                 </form>
+                
             </div>
             <div class="col-lg-4">
                 <div class="contact-info-wrap">
