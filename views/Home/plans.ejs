@@ -34,7 +34,18 @@
                                 <h3 class="price">Tshs 59,000<sub>/Month</sub></h3>
                             </div>
                             <div class="pricing-btn">
-                                <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% if (typeof showPlanPurchaseButtons !== 'undefined' && showPlanPurchaseButtons) { %>
+                                    <button
+                                        type="button"
+                                        class="btn transparent-btn signup-trigger"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#splynxSignupModal"
+                                        data-plan-name="Chita">
+                                        Buy This Plan
+                                    </button>
+                                <% } else { %>
+                                    <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -64,7 +75,18 @@
                                 <h3 class="price">Tshs 99,000<sub>/Month</sub></h3>
                             </div>
                             <div class="pricing-btn">
-                                <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% if (typeof showPlanPurchaseButtons !== 'undefined' && showPlanPurchaseButtons) { %>
+                                    <button
+                                        type="button"
+                                        class="btn transparent-btn signup-trigger"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#splynxSignupModal"
+                                        data-plan-name="Chita Pro">
+                                        Buy This Plan
+                                    </button>
+                                <% } else { %>
+                                    <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -94,7 +116,18 @@
                                 <h3 class="price">Tshs 199,000<sub>/Month</sub></h3>
                             </div>
                             <div class="pricing-btn">
-                                <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% if (typeof showPlanPurchaseButtons !== 'undefined' && showPlanPurchaseButtons) { %>
+                                    <button
+                                        type="button"
+                                        class="btn transparent-btn signup-trigger"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#splynxSignupModal"
+                                        data-plan-name="Chita Pro Max">
+                                        Buy This Plan
+                                    </button>
+                                <% } else { %>
+                                    <a href="/plan" class="btn btn-link">View Plans</a>
+                                <% } %>
                             </div>
                         </div>
                     </div>

@@ -46,7 +46,14 @@
                         </ul>
                     </div>
                     <h2 class="pricing-three-price"><span>From</span> 49,000<span>/month</span></h2>
-                    <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                    <button
+                        type="button"
+                        class="btn transparent-btn signup-trigger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#splynxSignupModal"
+                        data-plan-name="Starter Plan">
+                        Buy This Plan
+                    </button>
                 </div>
             </div>
             <!-- Combo Plan -->
@@ -70,7 +77,14 @@
                         </ul>
                     </div>
                     <h2 class="pricing-three-price"><span>From</span> 69,000<span>/month</span></h2>
-                    <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                    <button
+                        type="button"
+                        class="btn transparent-btn signup-trigger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#splynxSignupModal"
+                        data-plan-name="Combo Plan">
+                        Buy This Plan
+                    </button>
                 </div>
             </div>
             <!-- Premium Plan -->
@@ -95,7 +109,14 @@
                         </ul>
                     </div>
                     <h2 class="pricing-three-price"><span>From</span> 99,000<span>/month</span></h2>
-                    <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                    <button
+                        type="button"
+                        class="btn transparent-btn signup-trigger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#splynxSignupModal"
+                        data-plan-name="Premium Plan">
+                        Buy This Plan
+                    </button>
                 </div>
             </div>
             <!-- Ultimate Plan -->
@@ -117,7 +138,14 @@
                         </ul>
                     </div>
                     <h2 class="pricing-three-price"><span>From</span> 199,000<span>/month</span></h2>
-                    <a href="pricing.html" class="btn transparent-btn">Get Started</a>
+                    <button
+                        type="button"
+                        class="btn transparent-btn signup-trigger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#splynxSignupModal"
+                        data-plan-name="Ultimate Plan">
+                        Buy This Plan
+                    </button>
                 </div>
             </div>
         </div>
@@ -125,6 +153,31 @@
 </section>
 <!-- pricing-three-area-end -->
 
+<section class="signup-widget-modal-area">
+    <div class="modal fade" id="splynxSignupModal" tabindex="-1" aria-labelledby="splynxSignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h4 class="modal-title" id="splynxSignupModalLabel">Complete Your Signup</h4>
+                        <p class="mb-0" id="splynxSelectedPlan">Selected package: ChitaTelecom plan</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                        data-widget-type="embedded"
+                        width="100%"
+                        src="https://chita.splynx.app/admin/crm/sign-up?selected_internet=0&amp;selected_voice=0&amp;selected_recurring=0&amp;selected_bundle=0&amp;formTitle=Signup&amp;formButtonText=Register&amp;submitThanks=Thanks%20for%20signing%20up!&amp;required_tariff=0&amp;vat_included=0&amp;partner_id=1&amp;admin_id=0&amp;crm_status=1&amp;location=1&amp;show_form_terms=0&amp;form_terms_template=99&amp;required_first_name=1&amp;required_last_name=0&amp;required_email=1&amp;required_phone=1&amp;required_street=0&amp;required_city=0&amp;required_zip=0"
+                        frameborder="0"
+                        id="splynx-signup-widget-frame"
+                        title="Splynx signup widget">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
      <!-- pricing-cta-area -->
@@ -144,7 +197,92 @@
     </section>
     <!-- pricing-cta-area-end -->
 
+<script type="text/javascript">
+    (function () {
+        var js = document.getElementById("splynx_signup_script");
+        if (!js) {
+            js = document.createElement("script");
+            js.id = "splynx_signup_script";
+            js.src = "https://chita.splynx.app/js/development/widgets/signup.js";
+            document.body.appendChild(js);
+        }
 
+        var p = {
+            formTitle: "Signup",
+            formButtonText: "Register",
+            submitThanks: "Thanks for signing up!",
+            required_tariff: 0,
+            vat_included: 0,
+            partner_id: "1",
+            admin_id: "0",
+            crm_status: "1",
+            location: "1",
+            show_form_terms: 0,
+            form_terms_template: "99",
+            required_first_name: 1,
+            required_last_name: 0,
+            required_email: 1,
+            required_phone: 1,
+            required_street: 0,
+            required_city: 0,
+            required_zip: 0,
+            queryString: "formTitle=Signup&formButtonText=Register&submitThanks=Thanks%20for%20signing%20up!&required_tariff=0&vat_included=0&partner_id=1&admin_id=0&crm_status=1&location=1&show_form_terms=0&form_terms_template=99&required_first_name=1&required_last_name=0&required_email=1&required_phone=1&required_street=0&required_city=0&required_zip=0",
+            url: "https://chita.splynx.app",
+            scriptUrl: "https://chita.splynx.app/js/development/widgets/signup.js"
+        };
+
+        if (typeof SplynxSignUpWidget === "undefined") {
+            js.addEventListener("load", function () {
+                SplynxSignUpWidget.init(p);
+            });
+        } else {
+            SplynxSignUpWidget.init(p);
+        }
+    })();
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var selectedPlan = document.getElementById("splynxSelectedPlan");
+        var signupButtons = document.querySelectorAll(".signup-trigger");
+        var modalElement = document.getElementById("splynxSignupModal");
+        var urlParams = new URLSearchParams(window.location.search);
+
+        signupButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var planName = button.getAttribute("data-plan-name") || "ChitaTelecom plan";
+                selectedPlan.textContent = "Selected package: " + planName;
+            });
+        });
+
+        if (modalElement && urlParams.get("signup") === "1") {
+            var requestedPlan = urlParams.get("plan") || "ChitaTelecom plan";
+            selectedPlan.textContent = "Selected package: " + decodeURIComponent(requestedPlan);
+            bootstrap.Modal.getOrCreateInstance(modalElement).show();
+        }
+    });
+</script>
+
+<style>
+    #splynxSignupModal .modal-content {
+        border: 0;
+        border-radius: 20px;
+    }
+
+    #splynxSignupModal .modal-header {
+        padding: 1.25rem 1.5rem 0.75rem;
+    }
+
+    #splynxSignupModal .modal-body {
+        padding: 0 1rem 1rem;
+    }
+
+    #splynx-signup-widget-frame {
+        min-height: 760px;
+    }
+
+    .signup-trigger {
+        border: 0;
+    }
+</style>
 
 
 
